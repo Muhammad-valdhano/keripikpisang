@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kripang — Keripik Pisang Khas Lampung</title>
+    <meta name="description" content="Kripang - Keripik pisang khas Lampung dengan baluran coklat lumer tebal dan aneka rasa renyah pilihan.">
+    
+    <!-- Google Fonts: Poppins (Clean & Rounded like Kripang Logo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Poppins"', 'sans-serif'],
+                    },
+                    colors: {
+                        kripang: {
+                            chocoDark: '#361D0D',   /* Coklat pekat leleh */
+                            chocoMedium: '#4E2810', /* Coklat hangat */
+                            banana: '#FFB703',      /* Kuning pisang logo Kripang */
+                            bananaGold: '#FCA311',  /* Kuning emas gradasi */
+                            bananaLight: '#FFF2C6', /* Kuning pastel */
+                            kraft: '#F5EBE1',       /* Kertas kraft pouch */
+                            kraftBorder: '#DFC7AC', /* Border kraft lembut */
+                            creamBg: '#FAF5EE',     /* Background lembut */
+                            wa: '#25D366'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .logo-text {
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            color: #FFB703;
+            text-shadow: 
+                -2px -2px 0 #361D0D,  
+                 2px -2px 0 #361D0D,
+                -2px  2px 0 #361D0D,
+                 2px  2px 0 #361D0D,
+                 0px  4px 0 #361D0D;
+        }
+    </style>
+</head>
+<body class="bg-kripang-creamBg text-kripang-chocoDark font-sans antialiased selection:bg-kripang-banana selection:text-kripang-chocoDark">
+
+    <!-- COATING / CHOCOLATE LINE -->
+    <div class="w-full bg-kripang-chocoDark h-2.5"></div>
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-40 bg-kripang-creamBg/95 backdrop-blur-md border-b border-kripang-kraftBorder/60 transition-all">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- Logo Kripang -->
+            <a href="#" class="flex items-center gap-3">
+                <span class="text-3xl font-black logo-text tracking-normal">
+                    Kripang
+                </span>
+                <span class="hidden sm:inline-block text-xs font-semibold text-kripang-chocoMedium/80 border-l-2 border-kripang-kraftBorder pl-3 py-0.5 leading-tight">
+                    Keripik Pisang<br>Khas Lampung
+                </span>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-kripang-chocoMedium">
+                <a href="#produk" class="hover:text-kripang-bananaGold transition">Varian Rasa</a>
+                <a href="#keunggulan" class="hover:text-kripang-bananaGold transition">Keunggulan</a>
+                <a href="#tentang" class="hover:text-kripang-bananaGold transition">Tentang Kami</a>
+            </nav>
+
+            <!-- CTA WA Header -->
+            <a href="https://wa.me/6289527361356?text=Halo%20Admin%20Kripang,%20saya%20mau%20order%20keripik%20pisang" 
+               target="_blank" 
+               class="inline-flex items-center gap-2 bg-kripang-chocoDark hover:bg-kripang-chocoMedium text-kripang-banana text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full transition shadow-sm">
+                <span>Pesan via WA</span>
+                <svg class="w-4 h-4 text-kripang-wa" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="py-12 sm:py-16 border-b border-kripang-kraftBorder/60">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                
+                <!-- Text Column -->
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-kripang-bananaLight border border-kripang-banana/40 text-kripang-chocoDark text-xs font-bold mb-5">
+                        <span>🍌 100% Pisang Kepok Khas Lampung Asli</span>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-5xl font-black text-kripang-chocoDark leading-[1.2] mb-5 tracking-tight">
+                        Renyahnya Keripik Pisang, <br>
+                        <span class="text-kripang-bananaGold">Sensasi Coklat Lumer</span> Pilihan!
+                    </h1>
+                    
+                    <p class="text-base text-kripang-chocoMedium leading-relaxed mb-8 max-w-xl">
+                        Nikmati kelezatan <strong>Kripang</strong> — keripik pisang kepok asli khas Lampung dengan irisan renyah, dibalut saus coklat lumer tebal dan pilihan rasa favorit yang bikin nagih.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <a href="https://wa.me/6289527361356?text=Halo%20Admin%20Kripang,%20saya%20mau%20pesan%20Keripik%20Pisang%20Kripang" 
+                           target="_blank" 
+                           class="inline-flex items-center justify-center gap-3 bg-kripang-chocoDark hover:bg-kripang-chocoMedium text-kripang-banana font-bold px-7 py-3.5 rounded-2xl transition shadow-md text-sm">
+                            <svg class="w-5 h-5 text-kripang-wa" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                            </svg>
+                            <span>Pesan via WhatsApp</span>
+                            <span class="text-xs text-kripang-kraft font-mono">0895-2736-1356</span>
+                        </a>
+
+                        <a href="#produk" 
+                           class="inline-flex items-center justify-center px-6 py-3.5 rounded-2xl border-2 border-kripang-kraftBorder hover:border-kripang-bananaGold text-kripang-chocoDark font-bold bg-white transition text-sm">
+                            Lihat Varian Menu
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image Column: FOTO ASLI PRODUK KEMASAN POUCH KRIPANG -->
+                <div class="lg:col-span-5">
+                    <div class="overflow-hidden rounded-3xl bg-white border-2 border-kripang-kraftBorder shadow-xl relative group">
+                        <img src="./images/kripang-hero.jpg" 
+                             alt="Kripang Keripik Pisang Khas Lampung Kemasan Pouch" 
+                             class="w-full h-auto object-cover transform group-hover:scale-102 transition-transform duration-500">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 NILAI KEUNGGULAN -->
+    <section id="keunggulan" class="py-14 border-b border-kripang-kraftBorder/60 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-kripang-creamBg border border-kripang-kraftBorder/70">
+                    <span class="text-kripang-bananaGold font-black text-xl block mb-2">01</span>
+                    <h3 class="text-base font-bold text-kripang-chocoDark mb-2">Pisang Kepok Pilihan Lampung</h3>
+                    <p class="text-sm text-kripang-chocoMedium leading-relaxed">
+                        Diolah langsung dari pisang kepok unggul Lampung, menghasilkan kerenyahan empuk yang tahan lama dan tidak keras.
+                    </p>
+                </div>
+                <div class="p-6 rounded-2xl bg-kripang-creamBg border border-kripang-kraftBorder/70">
+                    <span class="text-kripang-bananaGold font-black text-xl block mb-2">02</span>
+                    <h3 class="text-base font-bold text-kripang-chocoDark mb-2">Saus Coklat Lumer Melimpah</h3>
+                    <p class="text-sm text-kripang-chocoMedium leading-relaxed">
+                        Dibalur coklat pekat kental yang lumer di mulut dengan rasa manis seimbang tanpa rasa pahit.
+                    </p>
+                </div>
+                <div class="p-6 rounded-2xl bg-kripang-creamBg border border-kripang-kraftBorder/70">
+                    <span class="text-kripang-bananaGold font-black text-xl block mb-2">03</span>
+                    <h3 class="text-base font-bold text-kripang-chocoDark mb-2">Kemasan Higienis Ziplock</h3>
+                    <p class="text-sm text-kripang-chocoMedium leading-relaxed">
+                        Kemasan kedap udara praktis yang menjaga kerenyahan keripik pisang tetap gurih kapan saja.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG PRODUK (FOTO PERSIS SESUAI GAMBAR YANG DIKIRIM USER) -->
+    <section id="produk" class="py-16 sm:py-20 border-b border-kripang-kraftBorder/60">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-kripang-bananaGold font-extrabold mb-2 block">
+                        Katalog Kripang
+                    </span>
+                    <h2 class="text-3xl font-black text-kripang-chocoDark">
+                        Varian Rasa Keripik Pisang
+                    </h2>
+                </div>
+                <p class="text-sm text-kripang-chocoMedium mt-2 sm:mt-0 font-medium">
+                    Pilih rasa favorit dan pesan langsung via WhatsApp
+                </p>
+            </div>
+
+            <!-- Product Cards Grid: Masing-masing menggunakan foto kiriman user -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Kripang Coklat Lumer (Foto kripang-coklat-lumer.png) -->
+                <div class="bg-white rounded-3xl overflow-hidden border-2 border-kripang-bananaGold/50 shadow-md flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="h-64 overflow-hidden bg-kripang-creamBg relative">
+                            <img src="./images/kripang-coklat-lumer.png" 
+                                 alt="Keripik Pisang Coklat Lumer Kripang" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-kripang-chocoDark text-kripang-banana text-xs font-black px-3 py-1 rounded-full shadow">
+                                ★ BEST SELLER
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-kripang-chocoDark mb-1">
+                                Kripang Coklat Lumer
+                            </h3>
+                            <p class="text-xs text-kripang-bananaGold font-bold mb-3">Signature Lezat • Coklat Pekat Lumer</p>
+                            <p class="text-sm text-kripang-chocoMedium leading-relaxed mb-6">
+                                Keripik pisang kepok renyah dibalut saus coklat leleh tebal melimpah yang lumer di setiap gigitan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-3 border-t border-kripang-kraftBorder/50 flex items-center justify-between">
+                        <div>
+                            <span class="text-[11px] text-kripang-chocoMedium/80 block font-semibold">Harga</span>
+                            <span class="text-xl font-black text-kripang-chocoDark font-mono">Rp 18.000</span>
+                        </div>
+                        <a href="https://wa.me/6289527361356?text=Halo%20Admin%20Kripang,%20saya%20mau%20pesan%20Kripang%20Coklat%20Lumer%20(Rp%2018.000)" 
+                           target="_blank" 
+                           class="text-xs font-bold bg-kripang-chocoDark hover:bg-kripang-chocoMedium text-kripang-banana px-4 py-2.5 rounded-xl transition shadow">
+                            Pesan Rasa Ini
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Kripang Khas Lampung Gurih Original (Foto kripang-lampung-original.png) -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-kripang-kraftBorder shadow-sm flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="h-64 overflow-hidden bg-kripang-creamBg relative">
+                            <img src="./images/kripang-lampung-original.png" 
+                                 alt="Keripik Pisang Khas Lampung Original Kemasan" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-kripang-bananaLight text-kripang-chocoDark text-xs font-bold px-3 py-1 rounded-full border border-kripang-kraftBorder">
+                                Khas Lampung
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-kripang-chocoDark mb-1">
+                                Kripang Gurih Khas Lampung
+                            </h3>
+                            <p class="text-xs text-kripang-bananaGold font-bold mb-3">Resep Asli Lampung • Gurih Asin Renyah</p>
+                            <p class="text-sm text-kripang-chocoMedium leading-relaxed mb-6">
+                                Olahan pisang kepok kuning asli Lampung dengan bumbu gurih klasik asin yang renyah kres nagih.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-3 border-t border-kripang-kraftBorder/50 flex items-center justify-between">
+                        <div>
+                            <span class="text-[11px] text-kripang-chocoMedium/80 block font-semibold">Harga</span>
+                            <span class="text-xl font-black text-kripang-chocoDark font-mono">Rp 16.000</span>
+                        </div>
+                        <a href="https://wa.me/6289527361356?text=Halo%20Admin%20Kripang,%20saya%20mau%20pesan%20Kripang%20Gurih%20Khas%20Lampung%20(Rp%2016.000)" 
+                           target="_blank" 
+                           class="text-xs font-bold bg-kripang-chocoDark hover:bg-kripang-chocoMedium text-kripang-banana px-4 py-2.5 rounded-xl transition shadow">
+                            Pesan Rasa Ini
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Kripang Manis Legit Tradisional (Foto kripang-manis-klasik.png) -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-kripang-kraftBorder shadow-sm flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="h-64 overflow-hidden bg-kripang-creamBg relative">
+                            <img src="./images/kripang-manis-klasik.png" 
+                                 alt="Keripik Pisang Manis Legit Tradisional Tampah" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-kripang-bananaLight text-kripang-chocoDark text-xs font-bold px-3 py-1 rounded-full border border-kripang-kraftBorder">
+                                Manis Legit
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-kripang-chocoDark mb-1">
+                                Kripang Manis Legit
+                            </h3>
+                            <p class="text-xs text-kripang-bananaGold font-bold mb-3">Pisang Kepok Kuning • Manis Alami</p>
+                            <p class="text-sm text-kripang-chocoMedium leading-relaxed mb-6">
+                                Potongan bulat pisang kepok pilihan yang digoreng garing dengan lapisan rasa manis legit alami.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-3 border-t border-kripang-kraftBorder/50 flex items-center justify-between">
+                        <div>
+                            <span class="text-[11px] text-kripang-chocoMedium/80 block font-semibold">Harga</span>
+                            <span class="text-xl font-black text-kripang-chocoDark font-mono">Rp 16.000</span>
+                        </div>
+                        <a href="https://wa.me/6289527361356?text=Halo%20Admin%20Kripang,%20saya%20mau%20pesan%20Kripang%20Manis%20Legit%20(Rp%2016.000)" 
+                           target="_blank" 
+                           class="text-xs font-bold bg-kripang-chocoDark hover:bg-kripang-chocoMedium text-kripang-banana px-4 py-2.5 rounded-xl transition shadow">
+                            Pesan Rasa Ini
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Kripang Keju Tabur Gurih (Foto kripang-keju-parut.png) -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-kripang-kraftBorder shadow-sm flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="h-64 overflow-hidden bg-kripang-creamBg relative">
+                            <img src="./images/kripang-keju-parut.png" 
+                                 alt="Keripik Pisang Keju Tabur Gurih" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-kripang-bananaLight text-kripang-chocoDark text-xs font-bold px-3 py-1 rounded-full border border-kripang-kraftBorder">
+                                Keju Parut
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-kripang-chocoDark mb-1">
+                                Kripang Keju Gurih
+                            </h3>
+                            <p class="text-xs text-kripang-bananaGold font-bold mb-3">Topping Keju Melimpah • Gurih Renyah</p>
+                            <p class="text-sm text-kripang-chocoMedium leading-relaxed mb-6">
+                                Keripik pisang panjang dengan limpahan parutan keju gurih yang renyah dan gurih mantap.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-3 border-t border-kripang-kraftBorder/50 flex items-center justify-between">
+                        <div>
+                            <span class="text-[11px] text-kripang-chocoMedium/80 block font-semibold">Harga</span>
+                            <span class="text-xl font-black text-kripang-chocoDark font-mono">Rp 17.500</span>
+                        </div>
+                        <a href="https://wa.me/6289527361356?text=Halo%20Admin%20Kripang,%20saya%20mau%20pesan%20Kripang%20Keju%20Gurih%20(Rp%2017.500)" 
+                           target="_blank" 
+                           class="text-xs font-bold bg-kripang-chocoDark hover:bg-kripang-chocoMedium text-kripang-banana px-4 py-2.5 rounded-xl transition shadow">
+                            Pesan Rasa Ini
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Kripang Aneka Rasa Glaze (Foto kripang-3rasa.png) -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-kripang-kraftBorder shadow-sm flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="h-64 overflow-hidden bg-kripang-creamBg relative">
+                            <img src="./images/kripang-3rasa.png" 
+                                 alt="Kripang Varian Rasa Coklat, Tiramisu, Greentea" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-kripang-bananaLight text-kripang-chocoDark text-xs font-bold px-3 py-1 rounded-full border border-kripang-kraftBorder">
+                                Aneka Glaze
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-kripang-chocoDark mb-1">
+                                Varian Tiramisu & Greentea
+                            </h3>
+                            <p class="text-xs text-kripang-bananaGold font-bold mb-3">Glaze Modern • Coklat, Tiramisu, Matcha</p>
+                            <p class="text-sm text-kripang-chocoMedium leading-relaxed mb-6">
+                                Pilihan rasa kekinian dengan lumuran saus glaze Tiramisu harum dan Greentea Matcha yang creamy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-3 border-t border-kripang-kraftBorder/50 flex items-center justify-between">
+                        <div>
+                            <span class="text-[11px] text-kripang-chocoMedium/80 block font-semibold">Harga</span>
+                            <span class="text-xl font-black text-kripang-chocoDark font-mono">Rp 18.000</span>
+                        </div>
+                        <a href="https://wa.me/6289527361356?text=Halo%20Admin%20Kripang,%20saya%20mau%20pesan%20Kripang%20Varian%20Glaze%20(Tiramisu/Greentea)" 
+                           target="_blank" 
+                           class="text-xs font-bold bg-kripang-chocoDark hover:bg-kripang-chocoMedium text-kripang-banana px-4 py-2.5 rounded-xl transition shadow">
+                            Pesan Rasa Ini
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Paket Komplit Bundling Hemat (Foto kripang-hero.jpg) -->
+                <div class="bg-kripang-bananaLight/60 rounded-3xl overflow-hidden border-2 border-kripang-bananaGold shadow-md flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="h-64 overflow-hidden bg-kripang-creamBg relative">
+                            <img src="./images/kripang-hero.jpg" 
+                                 alt="Paket Komplit Bundling Kripang" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-kripang-bananaGold text-kripang-chocoDark text-xs font-black px-3 py-1 rounded-full shadow">
+                                ★ PAKET HEMAT
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-kripang-chocoDark mb-1">
+                                Paket Komplit Kripang
+                            </h3>
+                            <p class="text-xs text-kripang-bananaGold font-bold mb-3">Bundling Hemat • Coba Semua Rasa</p>
+                            <p class="text-sm text-kripang-chocoMedium leading-relaxed mb-6">
+                                Dapatkan paket hemat aneka rasa (Coklat Lumer, Gurih Asli Lampung, Manis Legit, dan Keju).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-3 border-t border-kripang-bananaGold/40 flex items-center justify-between">
+                        <div>
+                            <span class="text-[11px] text-kripang-chocoMedium/80 block font-semibold">Harga Paket</span>
+                            <span class="text-xl font-black text-kripang-chocoDark font-mono">Rp 65.000</span>
+                        </div>
+                        <a href="https://wa.me/6289527361356?text=Halo%20Admin%20Kripang,%20saya%20mau%20pesan%20Paket%20Komplit%20Kripang%20(Rp%2065.000)" 
+                           target="_blank" 
+                           class="text-xs font-bold bg-kripang-chocoDark hover:bg-kripang-chocoMedium text-kripang-banana px-4 py-2.5 rounded-xl transition shadow">
+                            Pesan Paket
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section id="tentang" class="py-16 sm:py-20 border-b border-kripang-kraftBorder/60 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="text-xs uppercase tracking-widest text-kripang-bananaGold font-extrabold mb-3 block">
+                Tradisi & Kualitas
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-black text-kripang-chocoDark mb-5">
+                Kripang — Keripik Pisang Khas Lampung
+            </h2>
+            <p class="text-kripang-chocoMedium leading-relaxed text-base mb-6 max-w-2xl mx-auto">
+                <strong>Kripang</strong> lahir dari kebanggaan kami terhadap tradisi kuliner Lampung sebagai surganya olahan keripik pisang terbaik di Indonesia. Menggunakan pisang kepok pilihan bermutu tinggi yang diiris presisi dan dipadukan dengan coklat lumer spesial, menghadirkan kerenyahan nikmat yang tak terlupakan.
+            </p>
+            <div class="inline-flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-semibold text-kripang-chocoDark border-t border-kripang-kraftBorder/60 pt-6">
+                <span>✓ 100% Buah Pisang Kepok Pilihan</span>
+                <span>•</span>
+                <span>✓ Coklat Lumer Tebal & Legit</span>
+                <span>•</span>
+                <span>✓ Kemasan Pouch Praktis Kedap Udara</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="py-16 bg-kripang-chocoDark text-white">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <span class="text-xs uppercase tracking-widest text-kripang-banana font-bold mb-3 block">
+                Pemesanan Mudah via WhatsApp
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black mb-4 text-white">
+                Siap Nyemil Kripang Hari Ini?
+            </h2>
+            <p class="text-kripang-kraft/80 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
+                Pesan langsung via WhatsApp. Kami siap melayani pengiriman ke seluruh kota untuk Anda!
+            </p>
+            <a href="https://wa.me/6289527361356?text=Halo%20Admin%20Kripang,%20saya%20mau%20order%20keripik%20pisang%20sekarang" 
+               target="_blank" 
+               class="inline-flex items-center gap-3 bg-kripang-banana hover:bg-kripang-bananaGold text-kripang-chocoDark font-black px-8 py-4 rounded-full transition text-sm shadow-xl">
+                <svg class="w-5 h-5 text-kripang-chocoDark" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                <span>Chat WhatsApp: 0895-2736-1356</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-kripang-chocoDark/95 border-t border-white/10 text-kripang-kraft/60 text-xs">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Kripang. Keripik Pisang Khas Lampung.</p>
+            <p>Pemesanan Langsung WhatsApp: <strong>0895-2736-1356</strong></p>
+        </div>
+    </footer>
+
+    <!-- TOMBOL MELAYANG WHATSAPP -->
+    <a href="https://wa.me/6289527361356?text=Halo%20Admin%20Kripang,%20saya%20mau%20tanya%20produk%20keripik%20pisang" 
+       target="_blank" 
+       aria-label="Chat WhatsApp Kripang"
+       class="fixed bottom-6 right-6 z-50 w-13 h-13 p-3 rounded-full bg-kripang-wa hover:bg-emerald-600 text-white shadow-xl flex items-center justify-center transition hover:scale-110">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+</body>
+</html>
